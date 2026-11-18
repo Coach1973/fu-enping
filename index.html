@@ -54,12 +54,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(247,242,230,
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 38%}
 .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,48,35,.42) 0%,rgba(22,48,35,.30) 45%,rgba(247,242,230,.96) 96%)}
 .hero-in{position:relative;z-index:1}
-.hero-panel{max-width:780px;background:rgba(255,253,246,.93);border:1px solid var(--line);border-radius:22px;padding:44px 48px;box-shadow:0 20px 50px rgba(22,48,35,.25)}
+.hero-panel{max-width:1040px;display:grid;grid-template-columns:1fr 300px;gap:40px;align-items:center;background:rgba(255,253,246,.93);border:1px solid var(--line);border-radius:22px;padding:44px 48px;box-shadow:0 20px 50px rgba(22,48,35,.25)}
 .hero-panel .kicker{letter-spacing:.18em}
 .hero-panel h1{font-size:64px;margin:10px 0 4px}
 .hero-panel .en{font-size:24px;color:var(--muted);letter-spacing:.12em}
 .hero-panel .say{font-family:"Songti TC","PMingLiU",serif;font-size:32px;color:var(--pine);margin:20px 0 12px;line-height:1.4}
 .hero-panel p{font-size:21px}
+.hero-text{min-width:0}.hero-photo{margin:0}.hero-photo img{width:100%;height:auto;border-radius:18px;border:1px solid var(--line);box-shadow:0 12px 32px rgba(30,58,45,.22);display:block}.hero-photo figcaption{font-size:20px;color:var(--muted);text-align:center;margin-top:10px}
 .hero-btns{margin-top:26px;display:flex;flex-wrap:wrap;gap:14px}
 .btn{display:inline-block;font-size:21px;font-weight:700;text-decoration:none;border-radius:999px;padding:14px 30px;border:2px solid var(--pine);transition:transform .15s ease}
 .btn:hover{transform:translateY(-2px)}
@@ -186,7 +187,8 @@ footer p{text-align:center;font-size:20px;color:#a99f8c}
   .video-grid{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:1fr 1fr}
   .hero{padding-top:150px}
-  .hero-panel{padding:32px 26px}
+  .hero-panel{padding:32px 26px;grid-template-columns:minmax(0,1fr);gap:24px}
+  .hero-photo{order:-1;max-width:260px;margin:0 auto}
   .hero-panel h1{font-size:52px}
   .hero-panel .say{font-size:28px}
   .svc-note{grid-template-columns:1fr}
@@ -220,6 +222,7 @@ footer p{text-align:center;font-size:20px;color:#a99f8c}
   <div class="hero-bg"><img src="images/img-001.webp" alt="石拱橋跨過河面，左岸是甘蔗田與紅瓦農舍，右岸是白色小教堂，金色與紅色光帶在橋上交會" data-slot="IMG-001" width="1000" height="429" fetchpriority="high"></div>
   <div class="wrap hero-in">
     <div class="hero-panel">
+      <div class="hero-text">
       <div class="kicker">商務英漢通譯 · 臺南善化</div>
       <h1>傅恩平</h1>
       <div class="en">EN-PING FU</div>
@@ -234,6 +237,8 @@ footer p{text-align:center;font-size:20px;color:#a99f8c}
         <span class="tag">BNI 大台南南區・真鑽分會</span>
         <span class="tag">BNI Taiwan 全國翻譯團隊</span>
       </div>
+      </div>
+      <figure class="hero-photo"><img src="images/portrait.webp" alt="傅恩平，商務英漢通譯，戴著眼鏡、穿灰色西裝外套，在展場微笑" width="693" height="840" fetchpriority="high"><figcaption>傅恩平・榮益齋有限公司</figcaption></figure>
     </div>
   </div>
 </header>
